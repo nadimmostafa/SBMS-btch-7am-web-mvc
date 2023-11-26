@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/style.css/}">
+<title>thymeleaf</title>
+</head>
+<body>
+	<h2>Product Details</h2>
+	<table border="1">
+		<tr>
+			<th>Product ID</th>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Product Availablity</th>
+		</tr>
+		<tr th:each="item : ${list}">
+			<td th:text="${item.productId}"></td>
+			<td th:text="${item.productName}"></td>
+			<td>[[${item.productPrice}]]</td>
+			<td>[[${item.available}]]</td>
+		</tr>
+	</table>
+</body>
+</html>

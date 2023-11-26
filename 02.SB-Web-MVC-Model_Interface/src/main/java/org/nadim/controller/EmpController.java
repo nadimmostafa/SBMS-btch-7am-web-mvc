@@ -28,7 +28,7 @@ public class EmpController {
 	}
 	
 	//send list of objects to UI page
-	@GetMapping("/")
+	@GetMapping("/list")
 	public String listObj(Model model) {
 		return "productList";
 	}
