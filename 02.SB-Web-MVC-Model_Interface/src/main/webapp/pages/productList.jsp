@@ -8,6 +8,20 @@
 <title>list</title>
 </head>
 <body>
-	<h2>Products List</h2>
+	<h2>Employees List</h2>
+	<table>
+		<tr>
+			<th>Employee ID</th>
+			<th>Employee Name</th>
+			<th>Employee Email</th>
+		</tr>
+		<c:forEach var="item" items="${list}">
+			<tr>
+				<td>${item.empId}</td>
+				<td>${item.empName}</td>
+				<td>${item.empMail}</td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>

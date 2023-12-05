@@ -1,5 +1,7 @@
 package org.nadim.controller;
 
+import java.util.List;
+
 import org.nadim.entity.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,6 +32,14 @@ public class EmpController {
 	//send list of objects to UI page
 	@GetMapping("/list")
 	public String listObj(Model model) {
+		List<Employee> list = List.of(
+				new Employee(101,"Nadim","nadim26@gmail.com"),
+				new Employee(102,"Asif","asif56@gmail.com"),
+				new Employee(103,"Hadim","Hamid@gmail.com"),
+				new Employee(104,"Imran","imran34@gmail.com")
+				);
+		
+		model.addAttribute("list",list);
 		return "productList";
 	}
 }
